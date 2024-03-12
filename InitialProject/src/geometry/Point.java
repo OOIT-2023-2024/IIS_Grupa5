@@ -6,6 +6,16 @@ public class Point {
 	private int y;
 	private boolean selected;
 	
+	//metoda instance
+	public double distance(Point drugaTacka) {
+		//x koordinata prve tacke tj one nad kojom se poziva metoda distance
+		//-x koordinata druge tacke koja se prosledjuje metodi distance
+		int a = this.x - drugaTacka.x;
+		int b = this.y-drugaTacka.y;
+		double distance = Math.sqrt(a*a+b*b);
+		return distance;
+	}
+	
 	public int getX() {
 		return x;
 		//return this.x;

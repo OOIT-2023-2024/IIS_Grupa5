@@ -19,6 +19,64 @@ public class Test {
 		drugaTacka.setY(150);
 		System.out.println(drugaTacka.getY());
 		
+		prvaTacka.distance(drugaTacka);
+		
+		//Zadaci
+		
+		//1.
+		Point point1 = new Point();
+		Point point2 = new Point();
+		Line line1 = new Line();
+		point1.setX(10);
+		point1.setY(20);
+		point2.setX(30);
+		point2.setY(40);
+		
+		//3.
+		int y = point2.getY();
+		point1.setX(y);
+		
+		//ili
+		//point1.setX(point2.getY());
+		
+		//4.
+		//ovde trenutno nece raditi jer vraca null pointer exception
+		//pa cu zakomentarisati
+		
+		//pristup liniji je samo line1
+		//pristupamo pocetnoj tacki linije line1.getStartPoint()
+
+		//Point pocetnaTackaLinije = line1.getStartPoint();
+		//dobiti x koordinatu pocetne tacke linije
+		//int xKoordinata = pocetnaTackaLinije.getX();
+		
+		//ili u okviru jedne komande - 2. nacin
+		//line1.getStartPoint().getX();
+		
+		//5.
+		line1.setStartPoint(point1);
+		line1.setEndPoint(point2);
+		//sada se ne javlja exception jer smo postavili vrednosti
+		//za start i end point
+		System.out.println(line1.getStartPoint().getX());
+		System.out.println(line1.getStartPoint().getY());
+		System.out.println(line1.getEndPoint().getX());
+		System.out.println(line1.getEndPoint().getY());
+		
+		//6.
+		line1.getEndPoint().setY(23);
+		System.out.println(line1.getEndPoint().getY());
+		//prenos po referenci
+		System.out.println(point2.getY());
+		
+		//7.
+		line1.getStartPoint().setX(line1.getEndPoint().getY());
+		
+		//8. vec je slicno bilo
+		
+		//9.
+		line1.getEndPoint().setX((int)line1.length()-(line1.getStartPoint().getX()
+				+line1.getStartPoint().getY()));
 		
 
 	}
