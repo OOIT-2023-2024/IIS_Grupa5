@@ -34,4 +34,8 @@ public class Line {
 		this.selected = selected;
 	}
 	
+	public String toString() {
+		return startPoint.toString()+"-->"+endPoint;
+	}
+	
 }

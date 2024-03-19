@@ -6,6 +6,27 @@ public class Point {
 	private int y;
 	private boolean selected;
 	
+	public Point() {
+		
+	}
+	
+	public Point(int x, int y) {
+		this.x=x;
+		this.y=y;
+	}
+	
+	//nije dozvoljeno
+	/*public Point(int xKoordinata, int y) {
+		this.x=xKoordinata;
+		this.y=y;
+	}*/
+	
+	public Point(int x, int y, boolean selected) {
+		//naseledjivanje konstruktora
+		this(x,y);
+		this.selected=selected;
+	}
+	
 	//metoda instance
 	public double distance(Point drugaTacka) {
 		//x koordinata prve tacke tj one nad kojom se poziva metoda distance
@@ -15,6 +36,20 @@ public class Point {
 		double distance = Math.sqrt(a*a+b*b);
 		return distance;
 	}
+	
+	public boolean equals(Object obj) {
+		
+		if(obj instanceof Point) {
+			//downcast
+			if(this.x == ((Point)obj).x && 
+					this.y == ((Point)obj).y &&
+					 	this.selected == ((Point)obj).selected)
+				return true;
+				
+	        return false;
+		}
+		return false;
+    }
 	
 	public int getX() {
 		return x;
@@ -42,6 +77,9 @@ public class Point {
 		this.selected = selected;
 	}
 	
+	public String toString() {
+		return "("+this.x+","+this.y+")";
+	}
 	
 
 }

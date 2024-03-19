@@ -78,6 +78,31 @@ public class Test {
 		line1.getEndPoint().setX((int)line1.length()-(line1.getStartPoint().getX()
 				+line1.getStartPoint().getY()));
 		
+		//Vezbe 4
+		Rectangle rect1= new Rectangle();
+		rect1.setUpperLeftPoint(point2);
+		rect1.getUpperLeftPoint().setX(10);
+		
+		Point novaTacka = new Point(10,15, true);
+		System.out.println(novaTacka.getX());
+		
+		System.out.println(novaTacka);
+		//u pozadini se poziva ovako
+		System.out.println(novaTacka.toString());
+		
+		System.out.println(line1);
+		
+		int a = 5;
+		int b = 5;
+		System.out.println(a==b);
+		Point novaTacka2 = new Point(10,15, true);
+		//kod slozenih tipova operator == poredi reference
+		System.out.println(novaTacka==novaTacka2);
+		//metoda equals poredi objekte po vrednosti
+		//kada se redefinise
+		System.out.println(novaTacka.equals(novaTacka2));	
+		System.out.println(novaTacka.equals(line1));	
+		
 
 	}
 
