@@ -103,6 +103,18 @@ public class Test {
 		System.out.println(novaTacka.equals(novaTacka2));	
 		System.out.println(novaTacka.equals(line1));	
 		
+		
+		//Pete vezbe
+		Donut donut1 = new Donut(novaTacka, 50, 45);
+		System.out.println(donut1.getInnerRadius());
+		System.out.println(donut1.getRadius());
+		System.out.println(donut1.selected);
+		System.out.println(donut1);
+		
+		Circle donut2 = new Donut(novaTacka, 50, 45);
+		System.out.println(donut2.getRadius());
+		System.out.println(((Donut)donut2).getInnerRadius());
+		
 
 	}
 
