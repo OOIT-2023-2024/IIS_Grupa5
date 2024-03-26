@@ -46,6 +46,13 @@ public class Rectangle {
 				&& y >= this.upperLeftPoint.getY() && y <= this.upperLeftPoint.getY() + height);
 	}
 
+	public boolean contains(Point tackaKlika) {
+		return (tackaKlika.getX() >= this.upperLeftPoint.getX()
+				&& tackaKlika.getX() <= this.upperLeftPoint.getX() + width
+				&& tackaKlika.getY() >= this.upperLeftPoint.getY()
+				&& tackaKlika.getY() <= this.upperLeftPoint.getY() + height);
+	}
+
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;
 	}

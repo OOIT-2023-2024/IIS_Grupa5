@@ -42,6 +42,10 @@ public class Circle {
 		Point sadrziTacku = new Point(x, y);
 		return (this.center.distance(sadrziTacku) <= this.radius);
 	}
+	
+	public boolean contains(Point tackaKlika) {
+		return (this.center.distance(tackaKlika) <= this.radius);
+	}
 
 	public Point getCenter() {
 		return center;
